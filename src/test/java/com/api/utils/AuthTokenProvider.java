@@ -5,7 +5,7 @@ import static io.restassured.RestAssured.*;
 import static com.api.constant.Role.*;
 
 import com.api.constant.Role;
-import com.pojo.UserCredentials;
+import com.api.pojo.UserCredentials;
 
 import io.restassured.http.ContentType;
 

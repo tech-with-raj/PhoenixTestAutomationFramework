@@ -6,6 +6,8 @@ import org.apache.http.auth.UsernamePasswordCredentials;
 
 import org.testng.annotations.Test;
 
+import com.api.pojo.UserCredentials;
+
 import static org.hamcrest.Matchers.*;
 
 import java.io.IOException;
@@ -13,7 +15,6 @@ import java.io.IOException;
 import static com.api.utils.ConfigManager.*;
 
 import static com.api.utils.SpecUtil.*;
-import com.pojo.UserCredentials;
 
 import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;

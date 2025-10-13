@@ -9,7 +9,8 @@ import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import com.api.constant.Role;
-import com.api.pojo.*;
+import com.api.request.model.*;
+import static com.api.utils.DayTimeUtil.*;
 import com.api.utils.SpecUtil;
 
 import io.restassured.module.jsv.JsonSchemaValidator;
@@ -21,7 +22,7 @@ public class CreateJobAPITest {
 		
 		Customer customer = new Customer("Raja", "sekar", "9025398090", "", "raja@gmail.com", "");
 		CustomerAddress customerAddress = new CustomerAddress("010", "Vrindavan", "quarter", "Chennai", "AAA", "560102", "India", "TamilNadu");
-		CustomerProduct customerProduct  = new CustomerProduct("2025-07-01T18:30:00.000Z", "66512779617935", "66512779617935", "66512779617935", "2025-07-01T18:30:00.000Z", 1, 1);
+		CustomerProduct customerProduct  = new CustomerProduct(getTimeWithDayAgo(10), "66512779607935", "66512779607935", "66512779607935", getTimeWithDayAgo(10), 1, 1);
 		Problems problems = new Problems("2", "Phone is getting switch off");
 		List<Problems> problemsList = new ArrayList<Problems>();
 		problemsList.add(problems);
